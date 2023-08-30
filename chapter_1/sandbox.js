@@ -5,9 +5,22 @@ let user = {
     age : 20,
     email : "Cris@111gmail.com",
     address : "USA",
-    blogs : ["Why u follow rules" , "Just do whatever u feel right"]
-};
+    blogs : ["Why u follow rules" , "Just do whatever u feel right"],
 
-console.log(user);
-console.log(user.name);
+    login: function(){
+        console.log("The user logged in");
+    },
+    logout: function(){
+        console.log("The user logged out");
+    },
+    logBlogs: function(){
+        // console.log(this.blogs);
+        console.log("This user had written the following blogs:");
+        this.blogs.forEach(blog => {
+            console.log(blog);
+        })
+    }
+}
 
+user.logBlogs();
+console.log(this);
