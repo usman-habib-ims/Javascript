@@ -1,26 +1,19 @@
-// object literals
+// primitive values
 
-let user = {
-    name : "Cris",
-    age : 20,
-    email : "Cris@111gmail.com",
-    address : "USA",
-    blogs : ["Why u follow rules" , "Just do whatever u feel right"],
+let scoreOne = 50;
+let scoreTwo = scoreOne;
 
-    login: function(){
-        console.log("The user logged in");
-    },
-    logout: function(){
-        console.log("The user logged out");
-    },
-    logBlogs: function(){
-        // console.log(this.blogs);
-        console.log("This user had written the following blogs:");
-        this.blogs.forEach(blog => {
-            console.log(blog);
-        })
-    }
-}
+console.log(`scoreOne: ${scoreOne}` , `scoreTwo: ${scoreTwo}`);
 
-user.logBlogs();
-console.log(this);
+scoreOne = 100;
+
+console.log(`scoreOne: ${scoreOne}` , `scoreTwo: ${scoreTwo}`);
+
+reference value
+const userOne = { name: "vyu" , age: 30};
+const userTwo = userOne;
+
+console.log(userOne , userTwo);
+
+userOne.age = 40;
+console.log(userOne , userTwo);
