@@ -1,19 +1,15 @@
-// primitive values
+const para = document.querySelector('p');
+console.log(para.innerText);
+para.innerText = "Ninja are Awosome!";
+console.log(para.innerText);
+const paras = document.querySelectorAll('p');
 
-let scoreOne = 50;
-let scoreTwo = scoreOne;
+paras.forEach(para => {
+    console.log(para.innerText);
+    para.innerText += " what you want";
+});
 
-console.log(`scoreOne: ${scoreOne}` , `scoreTwo: ${scoreTwo}`);
-
-scoreOne = 100;
-
-console.log(`scoreOne: ${scoreOne}` , `scoreTwo: ${scoreTwo}`);
-
-reference value
-const userOne = { name: "vyu" , age: 30};
-const userTwo = userOne;
-
-console.log(userOne , userTwo);
-
-userOne.age = 40;
-console.log(userOne , userTwo);
+const content = document.querySelector('.content');
+console.log(content.innerHTML);
+console.log(content.innerText);
+content.innerHTML += '<h2>THIS IS A NEW TAG</h2>';
